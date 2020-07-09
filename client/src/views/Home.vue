@@ -1,68 +1,20 @@
 <template>
-  <div class="home">
-    <div class="secondNav">
-      <div>
-        <h1>
-        𝘽𝙞𝙠𝙞𝙣 
-        </h1>
-      </div>
-      <hr />
 
-      <div class="secondNavChild">
-        <p>
-          <router-link to="/" style="text-decoration:none; color: black; "
-            >Home</router-link
-          >
-        </p>
-        <p>
-          <router-link to="/" style="text-decoration:none; color: black;"
-            >Harga Website</router-link
-          >
-        </p>
-        <p>
-          <router-link to="/" style="text-decoration:none; color: black;"
-            >Aplikasi Mobile</router-link
-          >
-        </p>
-        <p>
-          <router-link to="/" style="text-decoration:none; color: black;"
-            >Harga Website</router-link
-          >
-        </p>
-        <p>
-          <router-link to="/" style="text-decoration:none; color: black;"
-            >Hubungi Kami</router-link
-          >
-        </p>
+  <main class="home">
+
+    <section class="introduction-container">
+      <img class="introduction-image" src="../assets/done_website_undraw.svg" />
+      <div class="introduction-sentences">
+        <h1 class="introduction-sentences-title" >Solusi bisnis masa kini</h1>
+        <p class="introduction-sentences-paragraph" >Kami memberikan kemudahan dalam memperkenalkan bisnis anda ke dunia digital.</p>
       </div>
-      <div class="foto">
-        <div class="col-md-6">
-          <img src="../assets/fotoOrangKerja.svg" />
-        </div>
-        <div class="card shadow">
-          <div class="h4Card">
-            <h2 style="font-size:">Jasa Pembuatan Website</h2>
-          </div>
-          <div style="padding: 10px; text-align: center; " class="my-auto">
-            <h2 style="font-size: 60px; font-weight: bold; ">
-              Membuat Bisnis Anda Semakin Dikenal
-            </h2>
-          </div>
-          <button
-            class="btn btn-warning btn-md"
-            style="width: 400px; margin: auto; background-color: #E29216;"
-          >
-            <h3>
-              Buatkan Saya Website
-              <span><i class="fa fa-play-circle" aria-hidden="true"></i></span>
-            </h3>
-          </button>
-        </div>
-      </div>
-    </div>
+    </section>
+
     <AndaButuhkan/>
+
     <HargaTokoOnline />
-  </div>
+    
+  </main>
 </template>
 
 <script>
@@ -72,7 +24,8 @@ export default {
   name: "Home",
   components: {
     AndaButuhkan,
-    HargaTokoOnline 
+    HargaTokoOnline,
+    Header
   },
 };
 </script>
@@ -101,5 +54,35 @@ export default {
 }
 .h4Card {
   background-color: #E29216;
+}
+
+.introduction-container {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.introduction-image {
+  flex: 3;
+  margin: 10px;
+}
+.introduction-sentences {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+}
+
+.introduction-sentences-title {
+  color: #79a8a9;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.introduction-sentences-paragraph {
+  color: #1f4e5f;
+  font-size: 2em;
+  margin-bottom: 30px;
 }
 </style>
